@@ -1,0 +1,131 @@
+* {
+    /* note */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282846;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    /* 50% */
+    height: 250px;
+    /* 40% */
+    background-color: #ACA8FF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 6px 10px rgb(0 0 0 / 20%);
+    text-align: center;
+}
+
+
+
+.title {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    color: white;
+    position: relative;
+}
+
+.title p {
+    /* note لي واي فيدته */
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+}
+
+.title p::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background-color: white;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    transition: 1s;
+}
+
+
+.title:hover p::after {
+    width: 100%;
+    background-color: #5D5B8A;
+}
+
+
+.box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #424061;
+    height: 50px;
+    width: 50px;
+    border-radius: 25pc;
+    transition: width .5s ease-in-out;
+    overflow: hidden;
+}
+
+.box:hover {
+    width: 250px;
+}
+
+.search {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 0;
+    width: 0;
+    caret-color: #ACA8FF;
+    transition: width 0.5s ease-in-out, opacity 3s;
+    opacity: 0;
+}
+
+.search::placeholder {
+    color: #ccc;
+}
+
+.box:hover .search {
+    width: 180px;
+    padding-left: 15px;
+    opacity: 1;
+}
+
+.button {
+    border: none;
+    background-color: #424061;
+    font-size: 20px;
+    color: #DBDBEE;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+
+.box:hover .button {
+    background-color: white;
+    color: #424061;
+}
